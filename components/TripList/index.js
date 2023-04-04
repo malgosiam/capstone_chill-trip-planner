@@ -1,12 +1,15 @@
+import StyledListContainer from "../StyledListContainer";
+import StyledListItem from "../StyledListItem";
+
 export default function TripList({ trips }) {
   return (
-    <ul>
+    <StyledListContainer>
       {trips?.map((trip) => (
-        <li key={trip.id}>
-          {trip.startDate} - {trip.endDate}
+        <StyledListItem key={trip.id}>
+          <time>{trip.endDate}</time>
           {trip.townName}
-        </li>
+        </StyledListItem>
       ))}
-    </ul>
+    </StyledListContainer>
   );
 }
