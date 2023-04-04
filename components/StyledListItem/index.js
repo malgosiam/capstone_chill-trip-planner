@@ -7,8 +7,15 @@ const StyledListItem = styled.li`
   flex-direction: row;
   font-size: 1em;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--blue);
+  color: var(--white);
   border-radius: 1.3rem;
+
+  &:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+    box-shadow: inset -5px -5px 30px var(--orange);
+  }
 `;
 
 export default StyledListItem;

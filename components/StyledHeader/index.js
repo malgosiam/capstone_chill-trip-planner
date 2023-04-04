@@ -8,6 +8,7 @@ const StyledHeader = styled.header`
   margin-bottom: 1rem;
   font-size: 1.8em;
   font-weight: bolder;
+  text-shadow: 0px 0px 4rem #fff;
 `;
 
 export default StyledHeader;
