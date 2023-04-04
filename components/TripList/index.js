@@ -4,12 +4,15 @@ import StyledListItem from "../StyledListItem";
 export default function TripList({ trips }) {
   return (
     <StyledListContainer>
-      {trips?.map((trip) => (
-        <StyledListItem key={trip.id}>
-          <time>{trip.endDate}</time>
-          {trip.townName}
-        </StyledListItem>
-      ))}
+      {trips
+        ?.slice()
+        .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+        .map((trip) => (
+          <StyledListItem key={trip.id}>
+            <time>{trip.startDate}</time>
+            {trip.townName}
+          </StyledListItem>
+        ))}
     </StyledListContainer>
   );
 }
