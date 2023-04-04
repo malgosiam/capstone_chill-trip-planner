@@ -3,7 +3,7 @@ export default function TripList({ trips }) {
     <ul>
       {trips?.map((trip) => (
         <li key={trip.id}>
-          {trip.startDate}
+          {trip.startDate} - {trip.endDate}
           {trip.townName}
         </li>
       ))}
