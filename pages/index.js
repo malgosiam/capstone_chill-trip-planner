@@ -1,7 +1,14 @@
+import { StyledLink } from "../components/StyledLink";
+import Link from "next/link";
+
 export default function HomePage() {
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
+    <>
+      <h1>Chill trip planner</h1>
+      <h2>Hi there!</h2>
+      <Link href="/trips" passHref legacyBehavior>
+        Klick me to see your chill trips!
+      </Link>
+    </>
   );
 }
