@@ -4,7 +4,6 @@ const StyledListItem = styled.li`
   width: 85%;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   font-size: 1em;
   padding: 1rem;
   background-color: var(--blue);
