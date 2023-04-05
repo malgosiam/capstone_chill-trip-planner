@@ -10,7 +10,7 @@ const trips = [
 test("renders a list of all trips", () => {
   render(<TripList trips={trips} />);
   const tripItems = screen.getAllByRole("listitem");
-  expect(tripItems).toHaveLength(3);
+  expect(tripItems).toHaveLength(trips.length);
 });
 
 test("renders a list of trips sorted by start date", () => {
