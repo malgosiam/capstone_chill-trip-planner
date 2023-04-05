@@ -1,6 +1,6 @@
 import StyledHeader from "../../components/StyledHeader";
 import TripList from "../../components/TripList";
-import { trips } from "../../lib/trips.js";
+import { trips } from "../../data/trips.js";
 
 export default function TripsPage() {
   return (

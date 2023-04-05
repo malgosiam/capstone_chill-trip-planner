@@ -2,7 +2,7 @@ import StyledListContainer from "../StyledListContainer";
 import StyledListItem from "../StyledListItem";
 
 export default function TripList({ trips }) {
- const sortedTrips = trips
+  const sortedTrips = trips
     ?.slice()
     .sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
