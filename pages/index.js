@@ -7,7 +7,7 @@ export default function HomePage() {
       <h1>Chill trip planner</h1>
       <h2>Hi there!</h2>
       <Link href="/trips" passHref legacyBehavior>
-        <StyledLink>Klick me to see your chill trips!</StyledLink>
+        Klick me to see your chill trips!
       </Link>
     </>
   );
