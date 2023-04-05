@@ -1,4 +1,3 @@
-import { StyledLink } from "../components/StyledLink";
 import Link from "next/link";
 
 export default function HomePage() {

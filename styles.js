@@ -8,6 +8,7 @@ export default createGlobalStyle`
   --yellow: #F2DD72;
   --orange: #F2AF5C;
   --white: #FFFFFF;
+  --dark-purple: #7F007D;
 }
   *,
   *::before,
