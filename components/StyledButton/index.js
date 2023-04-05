@@ -7,6 +7,7 @@ const StyledButton = styled.button`
   color: var(--black);
   font-size: 1em;
   display: inline-block;
+  margin-top: 2rem;
 
   &:hover {
     background-color: var(--blue);
