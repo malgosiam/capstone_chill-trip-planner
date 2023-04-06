@@ -2,8 +2,8 @@ import Link from "next/link";
 import StyledButton from "../../components/StyledButton";
 import StyledHeader from "../../components/StyledHeader";
 import TripList from "../../components/TripList";
-import { trips } from "../../data/trips.js";
 import styled from "styled-components";
+import { useNewTripStore } from "../../stores/useNewTripStore";
 
 const FixedButton = styled(StyledButton)`
   position: fixed;
@@ -14,6 +14,7 @@ const FixedButton = styled(StyledButton)`
 `;
 
 export default function TripsPage() {
+  const trips = useNewTripStore((state) => state.trips);
   return (
     <>
       <StyledHeader>My trips</StyledHeader>

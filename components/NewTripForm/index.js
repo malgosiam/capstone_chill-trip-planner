@@ -1,18 +1,21 @@
 import styled from "styled-components";
 import StyledButton from "../StyledButton";
+import Link from "next/link";
 
-export default function NewTripForm() {
+export default function NewTripForm({ onSubmit }) {
   return (
     <>
-      <StyledForm>
+      <StyledForm onSubmit={onSubmit}>
         <label htmlFor="location">Town</label>
-        <StyledInput type="text" name="loaction" id="loaction" required />
+        <StyledInput type="text" name="location" id="location" required />
         <label htmlFor="startDate">Start time</label>
         <StyledInput type="date" name="startDate" id="startDate" required />
         <label htmlFor="endDate">End time</label>
         <StyledInput type="date" name="endDate" id="endDate" required />
-        <StyledButton>Add</StyledButton>
-        <StyledButton>Back</StyledButton>
+        <StyledButton type="submit">Add</StyledButton>
+        <Link href="/trips" passHref legacyBehavior>
+          <StyledButton>Back</StyledButton>
+        </Link>
       </StyledForm>
     </>
   );
