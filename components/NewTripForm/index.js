@@ -1,17 +1,46 @@
 import styled from "styled-components";
 import StyledButton from "../StyledButton";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function NewTripForm({ onSubmit }) {
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
+  function handleStartDateChange(event) {
+    const value = event.target.value;
+    setStartDate(value);
+    setEndDate(value);
+  }
+
+  function handleEndDateChange(event) {
+    const value = event.target.value;
+    setEndDate(value);
+  }
   return (
     <>
       <StyledForm onSubmit={onSubmit}>
         <label htmlFor="location">Town</label>
         <StyledInput type="text" name="location" id="location" required />
         <label htmlFor="startDate">Start time</label>
-        <StyledInput type="date" name="startDate" id="startDate" required />
+        <StyledInput
+          type="date"
+          name="startDate"
+          id="startDate"
+          value={startDate}
+          onChange={handleStartDateChange}
+          required
+        />
         <label htmlFor="endDate">End time</label>
-        <StyledInput type="date" name="endDate" id="endDate" required />
+        <StyledInput
+          type="date"
+          name="endDate"
+          id="endDate"
+          value={endDate}
+          onChange={handleEndDateChange}
+          min={startDate}
+          required
+        />
         <StyledButton type="submit">Add</StyledButton>
         <Link href="/trips" passHref legacyBehavior>
           <StyledButton>Back</StyledButton>
