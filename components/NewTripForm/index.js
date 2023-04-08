@@ -22,20 +22,22 @@ export default function NewTripForm({ onSubmit }) {
       <StyledForm onSubmit={onSubmit}>
         <label htmlFor="location">Town</label>
         <StyledInput type="text" name="location" id="location" required />
-        <label htmlFor="startDate">Start time</label>
+        <label htmlFor="startDate">Start date</label>
         <StyledInput
           type="date"
           name="startDate"
           id="startDate"
+          aria-label="Start Date"
           value={startDate}
           onChange={handleStartDateChange}
           required
         />
-        <label htmlFor="endDate">End time</label>
+        <label htmlFor="endDate">End date</label>
         <StyledInput
           type="date"
           name="endDate"
           id="endDate"
+          aria-label="End Date"
           value={endDate}
           onChange={handleEndDateChange}
           min={startDate}
