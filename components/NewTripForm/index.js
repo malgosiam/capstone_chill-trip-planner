@@ -57,11 +57,13 @@ const StyledForm = styled.form`
   justify-content: center;
   width: 80vw;
   margin: 0 auto;
+  color: var(--white);
 `;
 
 const StyledInput = styled.input`
   height: 2rem;
   border-radius: 1.3rem;
+  border: 1px solid var(--light-blue);
   font-size: 16px;
   font-family: Arial;
   padding: 1.6rem;

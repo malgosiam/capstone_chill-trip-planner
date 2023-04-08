@@ -6,9 +6,10 @@ const StyledHeader = styled.header`
   padding: 3rem;
   width: 100vw;
   margin-bottom: 1rem;
-  font-size: 1.8em;
+  color: var(--white);
+  font-size: 2.5em;
   font-weight: bolder;
-  text-shadow: 0px 0px 4rem #fff;
+  text-shadow: 4px 4px 1px var(--blue);
 `;
 
 export default StyledHeader;
