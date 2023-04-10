@@ -8,6 +8,8 @@ export default createGlobalStyle`
   --yellow: #F2DD72;
   --orange: #F2AF5C;
   --white: #FFFFFF;
+  --dark-purple: #7F007D;
+  --shadow: rgba(33,33,33,0.2);
 }
   *,
   *::before,
@@ -19,5 +21,11 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
     background-color: var(--light-blue);
+    background:color: var(--white);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--light-blue) 100% )
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
   }
 `;
