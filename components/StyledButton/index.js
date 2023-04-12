@@ -10,6 +10,7 @@ const StyledButton = styled.button`
   margin-top: 2rem;
   border: 1px solid var(--light-blue);
   transition: all 0.5s ease-out;
+  width: 77%;
 
   &:hover {
     background-color: var(--blue);

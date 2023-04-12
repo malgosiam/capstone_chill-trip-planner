@@ -28,4 +28,10 @@ export default createGlobalStyle`
   input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
   }
+
+  h3 {
+    color:var(--white);
+    font-weight: normal;
+    text-shadow: 4px 4px 1px var(--blue);
+  }
 `;
