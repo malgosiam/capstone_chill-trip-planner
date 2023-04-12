@@ -2,6 +2,7 @@ import styled from "styled-components";
 import StyledButton from "../StyledButton";
 import Link from "next/link";
 import { useState } from "react";
+import StyledContainer from "../StyledContainer";
 
 export default function NewTripForm({ onSubmit }) {
   const [startDate, setStartDate] = useState("");
@@ -43,10 +44,12 @@ export default function NewTripForm({ onSubmit }) {
           min={startDate}
           required
         />
-        <StyledButton type="submit">Add</StyledButton>
-        <Link href="/trips" passHref legacyBehavior>
-          <StyledButton>Back</StyledButton>
-        </Link>
+        <StyledContainer>
+          <StyledButton type="submit">Add</StyledButton>
+          <Link href="/trips" passHref legacyBehavior>
+            <StyledButton>Back</StyledButton>
+          </Link>
+        </StyledContainer>
       </StyledForm>
     </>
   );

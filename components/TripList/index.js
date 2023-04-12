@@ -1,5 +1,6 @@
 import StyledListContainer from "../StyledListContainer";
 import StyledListItem from "../StyledListItem";
+import { StyledLink } from "../StyledLink";
 
 export default function TripList({ trips }) {
   const sortedTrips = trips
@@ -9,10 +10,10 @@ export default function TripList({ trips }) {
   return (
     <StyledListContainer>
       {sortedTrips.map((trip) => (
-        <StyledListItem key={trip.id}>
+        <StyledLink key={trip.id} href={`/trips/${trip.id}`} passHref>
           <time>{trip.startDate}</time>
           {trip.townName}
-        </StyledListItem>
+        </StyledLink>
       ))}
     </StyledListContainer>
   );
