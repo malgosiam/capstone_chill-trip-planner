@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   margin-bottom: 1rem;
   color: var(--white);
   font-size: 2.5em;
-  font-weight: bolder;
+  font-weight: bold;
   text-shadow: 4px 4px 1px var(--blue);
 `;
 

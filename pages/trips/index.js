@@ -7,7 +7,7 @@ import { useNewTripStore } from "../../stores/useNewTripStore";
 
 const FixedButton = styled(StyledButton)`
   position: fixed;
-  bottom: 50px;
+  bottom: 70px;
   left: 50%;
   transform: translate(-50%, -50%);
   will-change: transform;
