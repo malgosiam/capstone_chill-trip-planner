@@ -29,4 +29,6 @@ export const useNewTripStore = create((set) => ({
   ],
 
   addTrip: (trip) => set((state) => ({ trips: [...state.trips, trip] })),
+  deleteTrip: (id) =>
+    set((state) => ({ trips: state.trips.filter((trip) => trip.id !== id) })),
 }));

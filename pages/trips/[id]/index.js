@@ -7,12 +7,22 @@ import StyledContainer from "../../../components/StyledContainer";
 
 export default function MyTripPage() {
   const trips = useNewTripStore((state) => state.trips);
+  const deleteTrip = useNewTripStore((state) => state.deleteTrip);
   const router = useRouter();
   if (!router.isReady) {
     return <h2>Loading</h2>;
   }
   const { id } = router.query;
   const tripData = trips.find((trip) => trip.id === id);
+
+  if (!tripData) {
+    return <h2>Trip not found</h2>;
+  }
+
+  function handleDelete() {
+    deleteTrip(id);
+    router.push("/trips");
+  }
 
   return (
     <>
@@ -36,6 +46,7 @@ export default function MyTripPage() {
         </Link>
       </StyledContainer>
       <StyledContainer>
+        <StyledButton onClick={handleDelete}>Delete Trip</StyledButton>
         <Link href="/trips" passHref legacyBehavior>
           <StyledButton>Back</StyledButton>
         </Link>
