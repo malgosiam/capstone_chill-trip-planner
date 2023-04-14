@@ -35,12 +35,5 @@ export default createGlobalStyle`
     text-shadow: 4px 4px 1px var(--blue);
   }
 
-  button.deleteButton {
-    background-color: var(--blue);
-    color:var(--white);
-
-
-    &:hover {
-      background-color: var(--red);
-  }
+ 
 `;

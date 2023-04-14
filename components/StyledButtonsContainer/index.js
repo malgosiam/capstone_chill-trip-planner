@@ -8,6 +8,15 @@ const StyledButtonsContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  button.deleteButton {
+    background-color: var(--blue);
+    color:var(--white);
+
+
+    &:hover {
+      background-color: var(--red);
+  }
 `;
 
 export default StyledButtonsContainer;
