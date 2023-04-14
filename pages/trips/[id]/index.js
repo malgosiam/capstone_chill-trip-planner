@@ -4,6 +4,7 @@ import StyledHeader from "../../../components/StyledHeader";
 import StyledButton from "../../../components/StyledButton";
 import Link from "next/link";
 import StyledContainer from "../../../components/StyledContainer";
+import StyledButtonsContainer from "../../../components/StyledButtonsContainer";
 
 export default function MyTripPage() {
   const trips = useNewTripStore((state) => state.trips);
@@ -45,12 +46,14 @@ export default function MyTripPage() {
           <StyledButton disabled>Add documents</StyledButton>
         </Link>
       </StyledContainer>
-      <StyledContainer>
-        <StyledButton onClick={handleDelete}>Delete Trip</StyledButton>
+      <StyledButtonsContainer>
+        <StyledButton className="deleteButton" onClick={handleDelete}>
+          Delete Trip
+        </StyledButton>
         <Link href="/trips" passHref legacyBehavior>
           <StyledButton>Back</StyledButton>
         </Link>
-      </StyledContainer>
+      </StyledButtonsContainer>
     </>
   );
 }

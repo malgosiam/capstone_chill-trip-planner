@@ -7,8 +7,8 @@ export default createGlobalStyle`
   --light-blue: #2370B5;
   --yellow: #F2DD72;
   --orange: #F2AF5C;
+  --red: #D94625;
   --white: #FFFFFF;
-  --dark-purple: #7F007D;
   --shadow: rgba(33,33,33,0.2);
 }
   *,
@@ -33,5 +33,14 @@ export default createGlobalStyle`
     color:var(--white);
     font-weight: normal;
     text-shadow: 4px 4px 1px var(--blue);
+  }
+
+  button.deleteButton {
+    background-color: var(--blue);
+    color:var(--white);
+
+
+    &:hover {
+      background-color: var(--red);
   }
 `;
