@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledButtonsContainer = styled.ul`
   list-style: none;
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
   padding: 0;
   display: flex;

@@ -5,22 +5,28 @@ import StyledButton from "../../../components/StyledButton";
 import Link from "next/link";
 import StyledContainer from "../../../components/StyledContainer";
 import StyledButtonsContainer from "../../../components/StyledButtonsContainer";
+import ConfirmDialogBox from "../../../components/ConfirmDialogBox";
+import { useState } from "react";
 
 export default function MyTripPage() {
   const trips = useNewTripStore((state) => state.trips);
   const deleteTrip = useNewTripStore((state) => state.deleteTrip);
+  const [showConfirmDialogBox, setShowConfirmDialogBox] = useState(false);
   const router = useRouter();
   if (!router.isReady) {
     return <h2>Loading</h2>;
   }
   const { id } = router.query;
   const tripData = trips.find((trip) => trip.id === id);
-
   if (!tripData) {
     return <h2>Trip not found</h2>;
   }
 
   function handleDelete() {
+    setShowConfirmDialogBox(true);
+  }
+
+  function confirmDelete() {
     deleteTrip(id);
     router.push("/trips");
   }
@@ -54,6 +60,13 @@ export default function MyTripPage() {
           <StyledButton>Back</StyledButton>
         </Link>
       </StyledButtonsContainer>
+      {showConfirmDialogBox && (
+        <ConfirmDialogBox
+          isOpen={showConfirmDialogBox}
+          onConfirm={confirmDelete}
+          onCancel={() => setShowConfirmDialogBox(false)}
+        />
+      )}
     </>
   );
 }

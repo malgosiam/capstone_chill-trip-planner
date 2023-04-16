@@ -21,7 +21,6 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
     background-color: var(--light-blue);
-    background:color: var(--white);
     background: linear-gradient(90deg, var(--blue) 0%, var(--light-blue) 100% )
   }
 
@@ -33,7 +32,5 @@ export default createGlobalStyle`
     color:var(--white);
     font-weight: normal;
     text-shadow: 4px 4px 1px var(--blue);
-  }
-
- 
+  } 
 `;
