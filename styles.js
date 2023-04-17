@@ -7,8 +7,8 @@ export default createGlobalStyle`
   --light-blue: #2370B5;
   --yellow: #F2DD72;
   --orange: #F2AF5C;
+  --red: #D94625;
   --white: #FFFFFF;
-  --dark-purple: #7F007D;
   --shadow: rgba(33,33,33,0.2);
 }
   *,
@@ -21,7 +21,6 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
     background-color: var(--light-blue);
-    background:color: var(--white);
     background: linear-gradient(90deg, var(--blue) 0%, var(--light-blue) 100% )
   }
 
@@ -33,5 +32,5 @@ export default createGlobalStyle`
     color:var(--white);
     font-weight: normal;
     text-shadow: 4px 4px 1px var(--blue);
-  }
+  } 
 `;

@@ -6,8 +6,10 @@ import styled from "styled-components";
 import { useNewTripStore } from "../../stores/useNewTripStore";
 
 const FixedButton = styled(StyledButton)`
+  width: 60vw;
+  margin: 0 auto;
   position: fixed;
-  bottom: 70px;
+  bottom: 4rem;
   left: 50%;
   transform: translate(-50%, -50%);
   will-change: transform;

@@ -1,5 +1,4 @@
 import StyledListContainer from "../StyledListContainer";
-import StyledListItem from "../StyledListItem";
 import { StyledLink } from "../StyledLink";
 
 export default function TripList({ trips }) {
