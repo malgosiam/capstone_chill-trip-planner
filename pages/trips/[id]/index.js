@@ -7,11 +7,13 @@ import StyledContainer from "../../../components/StyledContainer";
 import StyledButtonsContainer from "../../../components/StyledButtonsContainer";
 import ConfirmDialogBox from "../../../components/ConfirmDialogBox";
 import { useState } from "react";
+import EditDatesDialogBox from "../../../components/EditDatesDialogBox";
 
 export default function MyTripPage() {
   const trips = useNewTripStore((state) => state.trips);
   const deleteTrip = useNewTripStore((state) => state.deleteTrip);
   const [showConfirmDialogBox, setShowConfirmDialogBox] = useState(false);
+  const [showEditDialogBox, setShowEditDialogBox] = useState(false);
   const router = useRouter();
   if (!router.isReady) {
     return <h2>Loading</h2>;
@@ -29,6 +31,16 @@ export default function MyTripPage() {
   function confirmDelete() {
     deleteTrip(id);
     router.push("/trips");
+  }
+
+  function handleEdit() {
+    setShowEditDialogBox(true);
+  }
+
+  function handleSave(newStartDate, newEndDate) {
+    tripData.startDate = newStartDate;
+    tripData.endDate = newEndDate;
+    setShowEditDialogBox(false);
   }
 
   return (
@@ -56,7 +68,9 @@ export default function MyTripPage() {
         <StyledButton className="deleteButton" onClick={handleDelete}>
           Delete Trip
         </StyledButton>
-        <StyledButton className="changeButton">Change dates</StyledButton>
+        <StyledButton className="changeButton" onClick={handleEdit}>
+          Change dates
+        </StyledButton>
         <Link href="/trips" passHref legacyBehavior>
           <StyledButton>Back</StyledButton>
         </Link>
@@ -66,6 +80,14 @@ export default function MyTripPage() {
           isOpen={showConfirmDialogBox}
           onConfirm={confirmDelete}
           onCancel={() => setShowConfirmDialogBox(false)}
+        />
+      )}
+      {showEditDialogBox && (
+        <EditDatesDialogBox
+          onSave={handleSave}
+          onCancel={() => setShowEditDialogBox(false)}
+          startDate={tripData.startDate}
+          endDate={tripData.endDate}
         />
       )}
     </>
