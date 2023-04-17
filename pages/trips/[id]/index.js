@@ -56,6 +56,7 @@ export default function MyTripPage() {
         <StyledButton className="deleteButton" onClick={handleDelete}>
           Delete Trip
         </StyledButton>
+        <StyledButton className="changeButton">Change dates</StyledButton>
         <Link href="/trips" passHref legacyBehavior>
           <StyledButton>Back</StyledButton>
         </Link>

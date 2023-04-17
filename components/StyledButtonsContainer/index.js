@@ -11,11 +11,20 @@ const StyledButtonsContainer = styled.ul`
 
   button.deleteButton {
     background-color: var(--blue);
-    color:var(--white);
-
+    color: var(--white);
 
     &:hover {
       background-color: var(--red);
+    }
+  }
+
+  button.changeButton {
+    background-color: var(--orange);
+    color: var(--blue);
+
+    &:hover {
+      background-color: var(--white);
+    }
   }
 `;
 
