@@ -19,11 +19,12 @@ const StyledButtonsContainer = styled.ul`
   }
 
   button.changeButton {
-    background-color: var(--orange);
-    color: var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
 
     &:hover {
-      background-color: var(--white);
+      background-color: var(--orange);
+      color: var(--blue);
     }
   }
 `;

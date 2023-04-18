@@ -12,6 +12,7 @@ import EditDatesDialogBox from "../../../components/EditDatesDialogBox";
 export default function MyTripPage() {
   const trips = useNewTripStore((state) => state.trips);
   const deleteTrip = useNewTripStore((state) => state.deleteTrip);
+  const updateTripDates = useNewTripStore((state) => state.updateTripDates);
   const [showConfirmDialogBox, setShowConfirmDialogBox] = useState(false);
   const [showEditDialogBox, setShowEditDialogBox] = useState(false);
   const router = useRouter();
@@ -38,8 +39,7 @@ export default function MyTripPage() {
   }
 
   function handleSave(newStartDate, newEndDate) {
-    tripData.startDate = newStartDate;
-    tripData.endDate = newEndDate;
+    updateTripDates(id, newStartDate, newEndDate);
     setShowEditDialogBox(false);
   }
 
@@ -88,6 +88,7 @@ export default function MyTripPage() {
           onCancel={() => setShowEditDialogBox(false)}
           startDate={tripData.startDate}
           endDate={tripData.endDate}
+          updateTripDates={updateTripDates}
         />
       )}
     </>
