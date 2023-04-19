@@ -7,7 +7,7 @@ const StyledButton = styled.button`
   color: var(--blue);
   font-size: 1em;
   display: inline-block;
-  margin-top: 1.6rem;
+  margin-top: 1.1rem;
   border: 1px solid var(--light-blue);
   transition: all 0.5s ease-out;
   width: 77%;
