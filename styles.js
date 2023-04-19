@@ -29,10 +29,19 @@ export default createGlobalStyle`
     filter: invert(1);
   }
 
+  h1 {
+    text-align: center;
+    color: var(--blue);
+    text-shadow: 1px 1px 1px var(--white);
+
+  }
+
   h2 {
     text-align: center;
+    color: var(--white);
+    text-shadow: none;
   }
-  
+
   h3 {
     color:var(--white);
     font-weight: normal;

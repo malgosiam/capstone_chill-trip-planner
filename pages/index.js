@@ -1,4 +1,5 @@
 import Logo from "../public/assets/chicken1.svg";
+import Background from "../public/assets/background.svg";
 import styled from "styled-components";
 import StyledContainer from "../components/StyledContainer";
 import StyledHeader from "../components/StyledHeader";
@@ -140,12 +141,35 @@ function SvgSwitcher() {
   );
 }
 
+const BackgroundSvg = styled.svg`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: none;
+
+  @media (max-width: 414px) {
+    display: block;
+  }
+`;
+
+function BackgroundImage() {
+  return (
+    <BackgroundSvg>
+      <Background />
+    </BackgroundSvg>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
       <StyledHeader>
-        <h2>Chill trip planner</h2>
+        <h1>Chill trip planner</h1>
       </StyledHeader>
+      <BackgroundImage />
       <StyledContainer>
         <UpDownDiv>
           <SvgSwitcher />
