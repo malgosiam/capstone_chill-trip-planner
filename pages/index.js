@@ -167,7 +167,7 @@ export default function HomePage() {
   return (
     <>
       <StyledHeader>
-        <h1>Chill trip planner</h1>
+        <h1 className="homepageFont">Chill trip planner</h1>
       </StyledHeader>
       <BackgroundImage />
       <StyledContainer>

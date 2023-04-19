@@ -36,11 +36,16 @@ export default createGlobalStyle`
 
   }
 
+  h1.homepageFont {
+    font-size: 3.5rem;
+  }
+
   h2 {
     text-align: center;
     color: var(--white);
     text-shadow: none;
   }
+
 
   h3 {
     color:var(--white);
@@ -48,5 +53,4 @@ export default createGlobalStyle`
     text-shadow: 4px 4px 1px var(--blue);
   }
   
- 
 `;
