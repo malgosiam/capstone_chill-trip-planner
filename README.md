@@ -23,6 +23,6 @@ You can then use the following commands:
 
 > 💡 This project requires a bundler. You can use `npm run dev` to start the development server. You can then view the project in the browser at `http://localhost:3000`. The Live Preview Extension for Visual Studio Code will **not** work for this project.
 
-Copyright © 2023 @malgosiam. All rights reserved.
+Copyright © 2023 @malgosiam [My GitHub profile](https://github.com/malgosiam). All rights reserved.
 
 The logos in SVG format and all other SVGs included in this repository are subject to copyright laws and are the property of their respective owners. Any unauthorized use, reproduction, or distribution of these logos is strictly prohibited. Please contact the respective owners for permission to use these logos for commercial purposes or for any other use beyond fair use.
