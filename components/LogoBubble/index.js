@@ -50,7 +50,6 @@ const StyledBubbles = styled.div`
     }
   }
 
-  // Bubbles
   @-webkit-keyframes bubbles {
     from {
       @include transform(translate3d(0px, 0px, 0px));
