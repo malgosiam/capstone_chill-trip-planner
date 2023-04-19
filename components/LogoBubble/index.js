@@ -23,7 +23,6 @@ const StyledBubbles = styled.div`
     &.bigBubble {
       height: 30px;
       width: 30px;
-      @include box-shadow(#e0f9ff 8px 0px 0px inset);
       -webkit-animation-duration: 0.05s, 5s;
       animation-duration: 0.05s, 5s;
       -webkit-animation-delay: 0.9s, 1s;
@@ -34,7 +33,6 @@ const StyledBubbles = styled.div`
       left: 120px;
       height: 25px;
       width: 25px;
-      @include box-shadow(#e0f9ff 5px 0px 0px inset);
       -webkit-animation-duration: 0.05s, 4.9s;
       animation-duration: 0.05s, 4.9s;
       -webkit-animation-delay: 0.8s, 1s;
@@ -45,7 +43,6 @@ const StyledBubbles = styled.div`
       left: -120px;
       height: 15px;
       width: 15px;
-      @include box-shadow(#e0f9ff 3px 0px 0px inset);
       -webkit-animation-duration: 0.05s, 4.6s;
       animation-duration: 0.05s, 4.6s;
       -webkit-animation-delay: 0.7s, 1s;
