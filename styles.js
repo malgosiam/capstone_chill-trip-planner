@@ -5,6 +5,7 @@ export default createGlobalStyle`
 :root {
   --blue: #023E73;
   --light-blue: #2370B5;
+  --bubble-blue: #c1f1ff;
   --yellow: #F2DD72;
   --orange: #F2AF5C;
   --red: #D94625;
@@ -28,9 +29,15 @@ export default createGlobalStyle`
     filter: invert(1);
   }
 
+  h2 {
+    text-align: center;
+  }
+  
   h3 {
     color:var(--white);
     font-weight: normal;
     text-shadow: 4px 4px 1px var(--blue);
-  } 
+  }
+  
+ 
 `;
