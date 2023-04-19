@@ -32,13 +32,19 @@ export default createGlobalStyle`
   h1 {
     text-align: center;
     color: var(--blue);
-    text-shadow: 1px 1px 1px var(--white);
-
+    text-shadow: none;
   }
 
-  h1.homepageFont {
+  h1.homepageHeaderFont {
     font-size: 3.5rem;
   }
+
+  @media (min-width: 415px) {
+    h1.homepageHeaderFont {
+    color: var(--white);
+    text-shadow: 4px 4px 1px var(--blue);
+  }
+}
 
   h2 {
     text-align: center;
@@ -46,11 +52,9 @@ export default createGlobalStyle`
     text-shadow: none;
   }
 
-
   h3 {
     color:var(--white);
     font-weight: normal;
     text-shadow: 4px 4px 1px var(--blue);
   }
-  
 `;
