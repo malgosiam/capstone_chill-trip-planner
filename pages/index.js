@@ -1,4 +1,5 @@
 import Logo from "../public/assets/chicken1.svg";
+import Logo2 from "../public/assets/chicken2.svg";
 import Background from "../public/assets/background.svg";
 import styled from "styled-components";
 import StyledContainer from "../components/StyledContainer";
@@ -117,7 +118,7 @@ transform-origin: 50% 50%;
  `;
 
 function SvgSwitcher() {
-  const [svgComponents, setSvgComponents] = useState([Logo, LogoBubble]);
+  const [svgComponents, setSvgComponents] = useState([Logo, Logo2]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
