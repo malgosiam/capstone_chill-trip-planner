@@ -5,6 +5,7 @@ export default createGlobalStyle`
 :root {
   --blue: #023E73;
   --light-blue: #2370B5;
+  --bubble-blue: #c1f1ff;
   --yellow: #F2DD72;
   --orange: #F2AF5C;
   --red: #D94625;
@@ -28,9 +29,32 @@ export default createGlobalStyle`
     filter: invert(1);
   }
 
+  h1 {
+    text-align: center;
+    color: var(--blue);
+    text-shadow: none;
+  }
+
+  h1.homepageHeaderFont {
+    font-size: 3.5rem;
+  }
+
+  @media (min-width: 415px) {
+    h1.homepageHeaderFont {
+    color: var(--white);
+    text-shadow: 4px 4px 1px var(--blue);
+  }
+}
+
+  h2 {
+    text-align: center;
+    color: var(--white);
+    text-shadow: none;
+  }
+
   h3 {
     color:var(--white);
     font-weight: normal;
     text-shadow: 4px 4px 1px var(--blue);
-  } 
+  }
 `;
