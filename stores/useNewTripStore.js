@@ -28,6 +28,54 @@ export const useNewTripStore = create((set) => ({
     },
   ],
 
+  places: [
+    {
+      id: 1,
+      tripId: "642864256e025655967af08b",
+      name: "The High Line",
+      rating: "chill",
+      mapsUrl: "https://www.google.com/maps?q=the+high+line",
+      description:
+        "A unique elevated park built on a former railroad line, with great views and interesting art installations.",
+    },
+    {
+      id: 2,
+      tripId: "642864256e025655967af08b",
+      name: "The Empire State Building",
+      rating: "not",
+      mapsUrl: "https://www.google.com/maps?q=the+empire+state+building",
+      description:
+        "One of the most famous skyscrapers in the world, with breathtaking views from the top.",
+    },
+    {
+      id: 3,
+      tripId: "642864256e025655967af08b",
+      name: "The Metropolitan Museum of Art",
+      rating: "chill",
+      mapsUrl: "https://www.google.com/maps?q=the+metropolitan+museum+of+art",
+      description:
+        "One of the world's largest and most comprehensive art museums, with an extensive collection of works from all over the world.",
+    },
+    {
+      id: 4,
+      tripId: "642864256e025655967af08b",
+      name: "Central Park",
+      rating: "chill",
+      mapsUrl: "https://www.google.com/maps?q=central+park",
+      description:
+        "One of the most famous parks in the world, with plenty of outdoor activities and attractions.",
+    },
+    {
+      id: 5,
+      tripId: "642864256e025655967af08b",
+      name: "Little Island",
+      rating: "chill",
+      mapsUrl: "https://www.google.com/maps?q=little+island+on+new+york",
+      description:
+        "A new public park built on top of the Hudson River, featuring scenic views, live performances, and unique architecture.",
+    },
+  ],
+
   addTrip: (trip) => set((state) => ({ trips: [...state.trips, trip] })),
   deleteTrip: (id) =>
     set((state) => ({ trips: state.trips.filter((trip) => trip.id !== id) })),
@@ -35,6 +83,13 @@ export const useNewTripStore = create((set) => ({
     set((state) => ({
       trips: state.trips.map((trip) =>
         trip.id === id ? { ...trip, startDate, endDate } : trip
+      ),
+    })),
+
+  updatePlaceRating: (id, rating) =>
+    set((state) => ({
+      places: state.places.map((place) =>
+        place.id === id ? { ...place, rating } : place
       ),
     })),
 }));
