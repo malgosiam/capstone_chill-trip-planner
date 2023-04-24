@@ -52,7 +52,7 @@ export default function MyTripPage() {
           from {tripData.startDate} to {tripData.endDate}
         </h3>
         <Link href={`/trips/${id}/places`} passHref legacyBehavior>
-          <StyledButton disabled>Plan places to visit</StyledButton>
+          <StyledButton>Plan places to visit</StyledButton>
         </Link>
         <Link href={`/trips/${id}/packing-list`} passHref legacyBehavior>
           <StyledButton disabled>Add packing list</StyledButton>
