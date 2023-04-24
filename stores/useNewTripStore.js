@@ -74,6 +74,42 @@ export const useNewTripStore = create((set) => ({
       description:
         "A new public park built on top of the Hudson River, featuring scenic views, live performances, and unique architecture.",
     },
+    {
+      id: 5,
+      tripId: "3efb4c4b9a8bbf37155d63ee",
+      name: "Todoroki Valley",
+      rating: "chill",
+      mapsUrl: "https://www.google.com/maps?q=todoroki+valley",
+      description:
+        "A peaceful nature retreat in Tokyo with a walking trail alongside a flowing river and picturesque waterfalls.",
+    },
+    {
+      id: 6,
+      tripId: "3efb4c4b9a8bbf37155d63ee",
+      name: "Sensoji Temple",
+      rating: "chill",
+      mapsUrl: "https://www.google.com/maps?q=sensoji+temple",
+      description:
+        "A historic Buddhist temple in Tokyo with a bustling shopping street leading up to it.",
+    },
+    {
+      id: 7,
+      tripId: "3efb4c4b9a8bbf37155d63ee",
+      name: "Shibuya Crossing",
+      rating: "not",
+      mapsUrl: "https://www.google.com/maps?q=shibuya+crossing",
+      description:
+        "One of the busiest pedestrian intersections in the world, known for its neon lights and crowds.",
+    },
+    {
+      id: 8,
+      tripId: "3efb4c4b9a8bbf37155d63ee",
+      name: "Meiji Shrine",
+      rating: "chill",
+      mapsUrl: "https://www.google.com/maps?q=meiji+shrine",
+      description:
+        "A peaceful Shinto shrine surrounded by a forested park in the heart of Tokyo.",
+    },
   ],
 
   addTrip: (trip) => set((state) => ({ trips: [...state.trips, trip] })),

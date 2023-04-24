@@ -85,7 +85,6 @@ function PlaceList() {
   const router = useRouter();
   const { id } = router.query;
   const tripData = trips.find((trip) => trip.id === id);
-  console.log(tripData);
   const tripPlaces = places.filter((place) => place.tripId === id);
 
   if (places.length === 0) {
