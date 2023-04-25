@@ -200,4 +200,34 @@ export const useNewTripStore = create((set) => ({
         place.id === id ? { ...place, rating } : place
       ),
     })),
+
+  packingLists: {
+    "642864256e025655967af08b": [
+      { id: 10001, name: "T-shirts", quantity: 5, checked: false },
+      { id: 10002, name: "Pants", quantity: 3, checked: true },
+      { id: 10003, name: "Socks", quantity: 7, checked: false },
+      { id: 10004, name: "Toothbrush", quantity: 1, checked: true },
+      { id: 10005, name: "Toothpaste", quantity: 1, checked: true },
+      { id: 10006, name: "Underwear", quantity: 5, checked: false },
+      { id: 10007, name: "Shoes", quantity: 2, checked: false },
+      { id: 10008, name: "Jacket", quantity: 1, checked: true },
+      { id: 10009, name: "Hat", quantity: 1, checked: false },
+      { id: 10010, name: "Gloves", quantity: 1, checked: false },
+      { id: 10011, name: "Scarf", quantity: 1, checked: false },
+      { id: 10012, name: "Phone charger", quantity: 1, checked: false },
+      { id: 10013, name: "Flip flops", quantity: 1, checked: false },
+      { id: 10014, name: "Sunscreen", quantity: 1, checked: false },
+      { id: 10015, name: "Sunglasses", quantity: 1, checked: true },
+    ],
+  },
+
+  updatePackingListItem: (tripId, itemId, checked) =>
+    set((state) => ({
+      packingLists: {
+        ...state.packingLists,
+        [tripId]: state.packingLists[tripId].map((item) =>
+          item.id === itemId ? { ...item, checked } : item
+        ),
+      },
+    })),
 }));

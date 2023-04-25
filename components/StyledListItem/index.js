@@ -14,7 +14,7 @@ const StyledListItem = styled.li`
 
   &:hover {
     background-color: var(--yellow);
-    color: var(--black);
+    color: var(--blue);
     box-shadow: 0 0 10px var(--shadow);
   }
 `;

@@ -55,7 +55,7 @@ export default function MyTripPage() {
           <StyledButton>Plan places to visit</StyledButton>
         </Link>
         <Link href={`/trips/${id}/packing-list`} passHref legacyBehavior>
-          <StyledButton disabled>Add packing list</StyledButton>
+          <StyledButton>My packing list</StyledButton>
         </Link>
         <Link href={`/trips/${id}/tickets`} passHref legacyBehavior>
           <StyledButton disabled>Add tickets/ booked places</StyledButton>
