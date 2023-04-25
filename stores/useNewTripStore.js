@@ -220,4 +220,14 @@ export const useNewTripStore = create((set) => ({
       { id: 10015, name: "Sunglasses", quantity: 1, checked: true },
     ],
   },
+
+  updatePackingListItem: (tripId, itemId, checked) =>
+    set((state) => ({
+      packingLists: {
+        ...state.packingLists,
+        [tripId]: state.packingLists[tripId].map((item) =>
+          item.id === itemId ? { ...item, checked } : item
+        ),
+      },
+    })),
 }));
