@@ -1,6 +1,6 @@
-import StyledHeader from "../../../../components/StyledHeader";
 import { useRouter } from "next/router";
 import { useNewTripStore } from "../../../../stores/useNewTripStore";
+import StyledHeader from "../../../../components/StyledHeader";
 import StyledListContainer from "../../../../components/StyledListContainer";
 import StyledListItem from "../../../../components/StyledListItem";
 import styled from "styled-components";
