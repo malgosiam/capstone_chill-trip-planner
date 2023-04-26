@@ -26,6 +26,7 @@ const StyledBox = styled.section`
     border: 1px solid var(--light-blue);
     border-radius: 0.6rem;
     font-size: 1em;
+    color: var(--blue);
     background-color: var(--white);
     -webkit-appearance: none;
     -moz-appearance: none;

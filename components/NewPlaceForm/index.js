@@ -66,7 +66,7 @@ export default function NewPlaceForm({ onSubmit, tripId }) {
           </select>
         </StyledBox>
 
-        <label htmlFor="mapsUrl">Google Maps URL</label>
+        <label htmlFor="mapsUrl">Maps URL</label>
         <StyledInput
           type="url"
           name="mapsUrl"

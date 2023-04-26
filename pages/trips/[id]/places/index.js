@@ -102,7 +102,9 @@ function PlaceList() {
                 />
               ) : null}
 
-              <StyledLink href={place.mapsUrl}>Link to place</StyledLink>
+              <StyledLink href={place.mapsUrl} target="_blank">
+                Link to place
+              </StyledLink>
             </StyledBox>
             <fieldset>
               <legend>About the place: </legend>
