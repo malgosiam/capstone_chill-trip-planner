@@ -7,6 +7,8 @@ import Link from "next/link";
 import NotChillSvg from "../../../../public/assets/chicken1.svg";
 import ChillSvg from "../../../../public/assets/chicken2_1.svg";
 import StyledCard from "../../../../components/StyledCard";
+import StyledButtonsContainer from "../../../../components/StyledButtonsContainer";
+import StyledButton from "../../../../components/StyledButton";
 
 const StyledBox = styled.section`
   display: flex;
@@ -100,6 +102,11 @@ function PlaceList() {
       {tripData && (
         <StyledHeader>Places to visit in {tripData.townName} </StyledHeader>
       )}
+      <StyledButtonsContainer>
+        <Link href={`/trips/${id}/places/new-place`} passHref legacyBehavior>
+          <StyledButton>Add new place</StyledButton>
+        </Link>
+      </StyledButtonsContainer>
       <StyledContainer>
         {tripPlaces.map((place) => (
           <StyledCard key={place.id}>
