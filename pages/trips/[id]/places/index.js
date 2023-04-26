@@ -9,37 +9,7 @@ import ChillSvg from "../../../../public/assets/chicken2_1.svg";
 import StyledCard from "../../../../components/StyledCard";
 import StyledButtonsContainer from "../../../../components/StyledButtonsContainer";
 import StyledButton from "../../../../components/StyledButton";
-
-const StyledBox = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--blue);
-  background: linear-gradient(90deg, var(--blue) 35%, var(--light-blue) 100%);
-  color: var(--white);
-  margin: 0.5rem 0;
-  border-radius: 1.3rem;
-  border: 1px solid var(--light-blue);
-  box-shadow: 0 0 10px var(--shadow);
-
-  select {
-    flex: 1;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border: 1px solid var(--light-blue);
-    border-radius: 0.6rem;
-    font-size: 1em;
-    background-color: var(--white);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: ▽);
-    background-repeat: no-repeat;
-    background-position: right;
-    padding-right: 1.5rem;
-  }
-`;
+import StyledBox from "../../../../components/StyledBox";
 
 const ChillIcon = styled(ChillSvg)`
   position: absolute;
