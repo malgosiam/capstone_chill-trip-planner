@@ -1,11 +1,15 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { uid } from "uid";
 import { useNewTripStore } from "../../../../../stores/useNewTripStore";
 import StyledHeader from "../../../../../components/StyledHeader";
 import NewPlaceForm from "../../../../../components/NewPlaceForm";
+import LogoAnimation from "../../../../../components/LogoAnimation";
 
 export default function NewPlacePage({ onSubmit }) {
   const addPlace = useNewTripStore((state) => state.addPlace);
+  const [showAnimation, setShowAnimation] = useState(false);
+
   const router = useRouter();
   const { id } = router.query;
 
@@ -25,12 +29,18 @@ export default function NewPlacePage({ onSubmit }) {
 
     if (onSubmit) onSubmit(placeData);
     addPlace(placeData);
-    router.push(`/trips/${id}/places`);
+    setShowAnimation(true);
+    setTimeout(() => {
+      setShowAnimation(false);
+      router.push(`/trips/${id}/places`);
+    }, 2000);
   }
+
   return (
     <>
       <StyledHeader>Add new place</StyledHeader>
       <NewPlaceForm onSubmit={handleSubmit} tripId={id} />
+      {showAnimation && <LogoAnimation />}
     </>
   );
 }

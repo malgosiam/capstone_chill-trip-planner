@@ -15,6 +15,10 @@ const StyledBox = styled.section`
   border: 1px solid var(--light-blue);
   box-shadow: 0 0 10px var(--shadow);
 
+  label {
+    padding: 0 4rem 0 1rem;
+  }
+
   select {
     flex: 1;
     padding: 0.5rem;
@@ -29,7 +33,7 @@ const StyledBox = styled.section`
     background-image: url(${`data:image/svg+xml;utf8,${encodeURIComponent(
       renderToStaticMarkup(<Arrow />)
     )}`});
-    background-size: 0.3rem;
+    background-size: 1.1rem;
     background-position: calc(100% - 0.5rem) center;
     background-repeat: no-repeat;
     padding-right: 1.5rem;

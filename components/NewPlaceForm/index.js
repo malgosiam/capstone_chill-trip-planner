@@ -1,17 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { renderToStaticMarkup } from "react-dom/server";
 import styled from "styled-components";
 import StyledContainer from "../StyledContainer";
 import StyledInput from "../StyledInput";
 import StyledForm from "../StyledForm";
 import StyledButton from "../StyledButton";
 import StyledBox from "../StyledBox";
-import Arrow from "../../public/assets/arrow.svg";
 
 const StyledTextarea = styled.textarea`
-  height: 2rem;
   border-radius: 1.3rem;
   border: 1px solid var(--light-blue);
   font-size: 16px;
@@ -21,7 +18,7 @@ const StyledTextarea = styled.textarea`
   background-color: var(--blue);
   color: var(--white);
   width: 100%;
-  height: 6rem;
+  height: 5rem;
   resize: vertical;
 `;
 
@@ -56,7 +53,7 @@ export default function NewPlaceForm({ onSubmit, tripId }) {
           onChange={handleInputChange}
         />
         <StyledBox>
-          <label htmlFor="chill-rating"></label>
+          <label htmlFor="chill-rating">Place is</label>
           <select
             name="rating"
             id="chill-rating"
