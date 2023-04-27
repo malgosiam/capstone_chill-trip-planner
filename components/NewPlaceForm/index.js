@@ -2,11 +2,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import styled from "styled-components";
-import StyledContainer from "../StyledContainer";
 import StyledInput from "../StyledInput";
 import StyledForm from "../StyledForm";
 import StyledButton from "../StyledButton";
 import StyledBox from "../StyledBox";
+import StyledButtonsContainer from "../StyledButtonsContainer";
 
 const StyledTextarea = styled.textarea`
   border-radius: 1.3rem;
@@ -82,12 +82,12 @@ export default function NewPlaceForm({ onSubmit, tripId }) {
           value={formData.description}
           onChange={handleInputChange}
         />
-        <StyledContainer>
+        <StyledButtonsContainer>
           <StyledButton type="submit">Add</StyledButton>
           <Link href={`/trips/${id}/places`} passHref legacyBehavior>
             <StyledButton>Back</StyledButton>
           </Link>
-        </StyledContainer>
+        </StyledButtonsContainer>
       </StyledForm>
     </>
   );
