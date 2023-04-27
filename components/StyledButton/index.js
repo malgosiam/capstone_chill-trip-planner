@@ -11,6 +11,7 @@ const StyledButton = styled.button`
   border: 1px solid var(--light-blue);
   transition: all 0.5s ease-out;
   width: 77%;
+  white-space: nowrap;
 
   &:hover {
     background-color: var(--blue);
