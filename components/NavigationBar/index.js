@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
   align-items: center;
   position: fixed;
   bottom: 0;
-  height: 3rem;
+  height: 3.3rem;
   width: 100%;
   background-color: var(--yellow);
 `;

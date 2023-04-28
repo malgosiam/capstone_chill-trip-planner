@@ -22,7 +22,8 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
     background-color: var(--light-blue);
-    background: linear-gradient(90deg, var(--blue) 0%, var(--light-blue) 100% )
+    background: linear-gradient(90deg, var(--blue) 0%, var(--light-blue) 100% );
+    background-attachment: fixed;
   }
 
   input[type="date"]::-webkit-calendar-picker-indicator {

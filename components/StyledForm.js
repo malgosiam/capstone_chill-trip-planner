@@ -8,6 +8,10 @@ const StyledForm = styled.form`
   width: 80vw;
   margin: 0 auto;
   color: var(--white);
+
+  label {
+    padding: 0 4rem 0 1rem;
+  }
 `;
 
 export default StyledForm;

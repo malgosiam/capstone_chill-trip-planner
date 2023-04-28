@@ -230,4 +230,7 @@ export const useNewTripStore = create((set) => ({
         ),
       },
     })),
+
+  addPlace: (place) =>
+    set((state) => ({ ...state, places: [...state.places, place] })),
 }));
