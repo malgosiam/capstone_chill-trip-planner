@@ -7,8 +7,12 @@ const ShadowedLogo = styled(Logo)`
   margin-left: 1.8rem;
 `;
 
-const StyledH2 = styled.h2`
-  text-shadow: 0px 0px 10px var(--blue);
+const StyledP = styled.p`
+  text-align: center;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 4px 4px 1px var(--blue);
 `;
 
 const FadeInDiv = styled.div`
@@ -34,8 +38,8 @@ export default function MyAnimation() {
     <StyledOverlay>
       <FadeInDiv>
         <ShadowedLogo />
-        <StyledH2>Yay!</StyledH2>
-        <StyledH2>Your new place to see is added!</StyledH2>
+        <StyledP>Yay!</StyledP>
+        <StyledP>Your new place to see is added!</StyledP>
       </FadeInDiv>
     </StyledOverlay>
   );
