@@ -21,10 +21,14 @@ export default function ConfirmDialogBox({ onConfirm, onCancel }) {
     <>
       {isOpen && (
         <StyledOverlay>
-          <StyledDialogBox>
+          <StyledDialogBox role="dialog">
             <h2>Are you sure you want to delete this trip?</h2>
             <StyledButtonsContainer>
-              <StyledButton className="deleteButton" onClick={handleConfirm}>
+              <StyledButton
+                className="deleteButton"
+                onClick={handleConfirm}
+                aria-label="Delete this trip"
+              >
                 Delete
               </StyledButton>
               <StyledButton onClick={handleCancel}>Cancel</StyledButton>

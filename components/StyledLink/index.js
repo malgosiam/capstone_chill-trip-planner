@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   width: 85%;
   display: flex;
   text-decoration: none;
@@ -20,3 +20,5 @@ export const StyledLink = styled(Link)`
     box-shadow: 0 0 10px var(--shadow);
   }
 `;
+
+export default StyledLink;

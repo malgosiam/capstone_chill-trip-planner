@@ -9,14 +9,14 @@ const trips = [
 
 test("renders a list of all trips", () => {
   render(<TripList trips={trips} />);
-  const tripItems = screen.getAllByRole("listitem");
-  expect(tripItems).toHaveLength(trips.length);
+  const tripLinks = screen.getAllByRole("link");
+  expect(tripLinks).toHaveLength(trips.length);
 });
 
 test("renders a list of trips sorted by start date", () => {
   render(<TripList trips={trips} />);
-  const tripItems = screen.getAllByRole("listitem");
-  expect(tripItems[0]).toHaveTextContent("Paris");
-  expect(tripItems[1]).toHaveTextContent("New York");
-  expect(tripItems[2]).toHaveTextContent("London");
+  const tripLinks = screen.getAllByRole("link");
+  expect(tripLinks[0]).toHaveTextContent("Paris");
+  expect(tripLinks[1]).toHaveTextContent("New York");
+  expect(tripLinks[2]).toHaveTextContent("London");
 });
