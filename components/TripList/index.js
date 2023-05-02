@@ -1,5 +1,5 @@
 import StyledListContainer from "../StyledListContainer";
-import { StyledLink } from "../StyledLink";
+import StyledLink from "../StyledLink";
 
 export default function TripList({ trips }) {
   const sortedTrips = trips
